@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostChat - Anonymous Messaging</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <div class="ghost-icon">👻</div>
+                <h1>GhostChat</h1>
+            </div>
+            
+            <p class="tagline">Send and receive anonymous messages</p>
+            
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <label for="username">Choose a username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        placeholder="Enter your username" 
+                        required
+                        minlength="3"
+                        maxlength="20"
+                        pattern="[a-zA-Z0-9_]+"
+                    >
+                    <small>Only letters, numbers, and underscores</small>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <span>Continue</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+            
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">🔒</span>
+                    <span>Completely Anonymous</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <span>No Registration</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🚫</span>
+                    <span>No Tracking</span>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="login-footer">
+            <p>Your messages are stored securely and anonymously</p>
+        </footer>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

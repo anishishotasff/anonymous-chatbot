@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostChat - My Inbox</title>
+    <link rel="stylesheet" href="receiver.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">👻</span>
+                <h1>GhostChat</h1>
+            </div>
+            <div class="header-actions">
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">?</div>
+                    <span class="username" id="usernameDisplay">Loading...</span>
+                </div>
+                <button id="sendBtn" class="btn btn-secondary">Send Message</button>
+                <button id="logoutBtn" class="btn btn-danger">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">📬 My Inbox</h1>
+            <p class="page-subtitle">View all anonymous messages sent to you</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">�</div>
+                <div class="stat-content">
+                    <div class="stat-value" id="totalMessages">0</div>
+                    <div class="stat-label">Total Messages</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-content">
+                    <div class="stat-value" id="todayMessages">0</div>
+                    <div class="stat-label">Today</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏰</div>
+                <div class="stat-content">
+                    <div class="stat-value" id="lastMessage">N/A</div>
+                    <div class="stat-label">Last Message</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Messages</h2>
+                <div class="card-actions">
+                    <button id="shareLink" class="btn-icon">🔗 Share Link</button>
+                    <button id="refreshBtn" class="btn-icon">🔄 Refresh</button>
+                    <button id="deleteAllBtn" class="btn-icon btn-danger-outline">🗑️ Delete All</button>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="searchBox" placeholder="Search messages...">
+            </div>
+            
+            <div id="messagesContainer" class="messages-container">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p class="loading-text">Loading messages...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>GhostChat - Your messages are private and secure</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="receiver.js"></script>
+</body>
+</html>
